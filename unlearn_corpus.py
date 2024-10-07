@@ -213,7 +213,6 @@ def get_loss_corpus(
     ).to(device)
     logits = model(**model.prepare_inputs_for_generation(**tokens)).logits
     original_loss = -get_log_probs(logits, tokens["input_ids"]).mean()
-    print(f"{original_loss=}")
     if unlearn_type.value == UnlearnType.GD.value:
         loss = -original_loss
     else:
@@ -440,8 +439,6 @@ def freeze_model_layers(model, tuples):
             param.requires_grad = False
             frozen.append(name)
             not_frozen.remove(name)
-    print(f"printing frozen layers")
-    print(f"{frozen=}{not_frozen=}")
 
 def main(
     train_files: list[str],
@@ -512,7 +509,6 @@ def main(
         ).to(device)
 
     if freeze_layers is not None:
-        print(f"Freezing layers {freeze_layers}")
         freeze_model_layers(model, freeze_layers)
 
     optimizer = Lion(model.parameters(), lr=lr, use_triton=True)
@@ -753,9 +749,7 @@ def main(
             j = i % len(retain_batches)
 
             forget_loss = get_loss(model, batch, device, tokenizer, label_possibilities, unlearn_type=unlearn_type, mcq=mcq, print_prompts=i==0 and epoch==0, prompts_prefix="forget prompts", data_format=data_format, loss_type=loss_type)
-            print(f"{forget_loss=}")        
             retain_loss = get_loss(model, retain_batches[j], device, tokenizer, label_possibilities, unlearn_type=UnlearnType.FWF, print_prompts=i==0 and epoch==0, prompts_prefix="retain prompts", data_format=data_format, loss_type=loss_type)
-            print(f"{retain_loss=}")        
 
             try:
                 loss = forget_loss + retain_coeff * retain_loss

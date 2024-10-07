@@ -604,7 +604,6 @@ def main(
             Exception in main:\n{str(e)}\n\n\
             Traceback:\n{traceback.format_exc()}\
         """
-        send_notification(error_message)
         print(error_message)
         
         # Write the error to a file
@@ -1116,6 +1115,12 @@ def run_pipeline(cfg: DictConfig) -> None:
         )
 
         # Logs hyperparameters to wandb
+        config_flat = flatten_dict(OmegaConf.to_container(cfg, resolve=True))
+        wandb.init(
+            project=wandb_project_name,
+            config=config_flat,
+            name="pipeline"
+        )
         table_data = []
         for k, v in config_flat.items():
             table_data.append([k, str(v)])
@@ -1403,7 +1408,6 @@ def run_pipeline(cfg: DictConfig) -> None:
         err_str = f"""\
         Training Run failed with error: {e}\n\n\n{traceback.format_exc()}\
         """
-        send_notification(err_str)
         raise Exception(err_str)
 
 if __name__ == "__main__":

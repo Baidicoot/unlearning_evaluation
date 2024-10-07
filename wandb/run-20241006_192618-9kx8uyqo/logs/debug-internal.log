@@ -1,0 +1,19 @@
+{"time":"2024-10-06T19:26:18.987192926-07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-06T19:26:18.987271926-07:00","level":"INFO","msg":"created symlink","path":"/data2/Users/aghyad/publish_code_unlearn_eval/wandb/run-20241006_192618-9kx8uyqo/logs/debug-core.log"}
+{"time":"2024-10-06T19:26:19.01654084-07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-06T19:26:19.073406281-07:00","level":"INFO","msg":"created new stream","id":"9kx8uyqo"}
+{"time":"2024-10-06T19:26:19.0734791-07:00","level":"INFO","msg":"stream: started","id":"9kx8uyqo"}
+{"time":"2024-10-06T19:26:19.07353539-07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"9kx8uyqo"}}
+{"time":"2024-10-06T19:26:19.07354112-07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"9kx8uyqo"}}
+{"time":"2024-10-06T19:26:19.07351369-07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"9kx8uyqo"}}
+{"time":"2024-10-06T19:26:19.252631475-07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-06T19:26:19.254246332-07:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-06T19:26:19.627109204-07:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-06T19:26:19.64992487-07:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-06T19:26:22.879755824-07:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-06T19:26:23.994729395-07:00","level":"INFO","msg":"stream: closing","id":"9kx8uyqo"}
+{"time":"2024-10-06T19:26:23.994768525-07:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"9kx8uyqo"}}
+{"time":"2024-10-06T19:26:23.994813695-07:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"9kx8uyqo"}}
+{"time":"2024-10-06T19:26:23.994843145-07:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"9kx8uyqo"}}
+{"time":"2024-10-06T19:26:23.994946794-07:00","level":"INFO","msg":"stream: closed","id":"9kx8uyqo"}
+{"time":"2024-10-06T19:26:24.632199747-07:00","level":"ERROR","msg":"monitor: gpu: timeout waiting for process to exit"}

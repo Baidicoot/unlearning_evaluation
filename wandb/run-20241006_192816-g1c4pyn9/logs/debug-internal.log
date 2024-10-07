@@ -1,0 +1,10 @@
+{"time":"2024-10-06T19:28:16.629424783-07:00","level":"INFO","msg":"using version","core version":"0.18.3"}
+{"time":"2024-10-06T19:28:16.629451953-07:00","level":"INFO","msg":"created symlink","path":"/data2/Users/aghyad/publish_code_unlearn_eval/wandb/run-20241006_192816-g1c4pyn9/logs/debug-core.log"}
+{"time":"2024-10-06T19:28:16.670374138-07:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-06T19:28:16.72698554-07:00","level":"INFO","msg":"created new stream","id":"g1c4pyn9"}
+{"time":"2024-10-06T19:28:16.72702611-07:00","level":"INFO","msg":"stream: started","id":"g1c4pyn9"}
+{"time":"2024-10-06T19:28:16.72706747-07:00","level":"INFO","msg":"sender: started","stream_id":{"value":"g1c4pyn9"}}
+{"time":"2024-10-06T19:28:16.72706904-07:00","level":"INFO","msg":"handler: started","stream_id":{"value":"g1c4pyn9"}}
+{"time":"2024-10-06T19:28:16.72704606-07:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"g1c4pyn9"}}
+{"time":"2024-10-06T19:28:17.091103667-07:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-06T19:28:17.092197898-07:00","level":"INFO","msg":"Starting system monitor"}

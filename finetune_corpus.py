@@ -266,8 +266,6 @@ def freeze_model_layers(model, tuples):
             param.requires_grad = False
             frozen.append(name)
             not_frozen.remove(name)
-    print(f"printing frozen layers")
-    print(f"{frozen=}{not_frozen=}")
 
 
 @ray.remote(num_gpus=1)
